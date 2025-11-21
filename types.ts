@@ -12,6 +12,8 @@ export interface Experience {
 export interface Research {
   title: string;
   summary: string;
+  journalUrl?: string;
+  journalLogo?: string;
 }
 
 export interface SocialLink {

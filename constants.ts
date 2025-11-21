@@ -123,5 +123,7 @@ export const FEATURED_PROJECTS: Project[] = [
 
 export const RESEARCH: Research = {
   title: "Self-Healing Asphalt Technology",
-  summary: "My Master's thesis, 'Evaluation of self-healing of asphalt concrete through induction heating and metallic fibers', investigated innovative methods to extend pavement life. Published in 'Construction and Building Materials' (Elsevier) and presented at the Transportation Research Board (TRB), this research demonstrated how embedding metallic fibers and applying induction heating could artificially heal cracks in asphalt, restoring up to 85% of load capacity. This deep dive into materials science and engineering testing methodology honed the analytical mindset I now apply to software product management."
+  summary: "My Master's thesis, 'Evaluation of self-healing of asphalt concrete through induction heating and metallic fibers', investigated innovative methods to extend pavement life. Published in 'Construction and Building Materials' (Elsevier) and presented at the Transportation Research Board (TRB), this research demonstrated how embedding metallic fibers and applying induction heating could artificially heal cracks in asphalt, restoring up to 85% of load capacity. This deep dive into materials science and engineering testing methodology honed the analytical mindset I now apply to software product management.",
+  journalUrl: 'https://www.sciencedirect.com/science/article/abs/pii/S0950061817307171?via%3Dihub',
+  journalLogo: 'https://logo.clearbit.com/sciencedirect.com'
 };

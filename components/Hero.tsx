@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
           <span className="text-lg md:text-xl text-neutral-500 font-light block mb-2">
             I'm
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-neutral-900">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-neutral-900">
             {PROFILE.name}
           </h1>
         </div>

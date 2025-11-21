@@ -15,7 +15,7 @@ const FeaturedProjects: React.FC = () => {
         {/* Section Header */}
         <div className="mb-10 border-b border-neutral-800 pb-6">
           <h2 className="text-3xl font-light text-white">
-            Featured Projects
+            Assets Under Construction
           </h2>
         </div>
 

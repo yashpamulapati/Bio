@@ -1,5 +1,5 @@
 
-import { Experience, Research, SocialLink, Project } from './types';
+import { Experience, Research, SocialLink, Project, Tool } from './types';
 
 export const PROFILE = {
   name: "Yash Pamulapati",
@@ -127,3 +127,21 @@ export const RESEARCH: Research = {
   journalUrl: 'https://www.sciencedirect.com/science/article/abs/pii/S0950061817307171?via%3Dihub',
   journalLogo: 'https://logo.clearbit.com/sciencedirect.com'
 };
+
+export const TOOLS: Tool[] = [
+  { name: 'Anything AI', url: 'https://www.createanything.com/', logoUrl: 'https://logo.clearbit.com/createanything.com' },
+  { name: 'Grok', url: 'https://x.ai/grok', logoUrl: 'https://www.google.com/s2/favicons?domain=x.ai&sz=128' },
+  { name: 'NotebookLM', url: 'https://notebooklm.google.com/', logoUrl: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/origin/notebooklm.png' },
+  { name: 'Google AI Studio', url: 'https://aistudio.google.com/apps', logoUrl: 'https://logo.clearbit.com/ai.google.dev' },
+  { name: 'Claude', url: 'https://claude.ai', logoUrl: 'https://logo.clearbit.com/anthropic.com' },
+  { name: 'Microsoft 365 Copilot', url: 'https://www.microsoft.com/en-us/microsoft-365-copilot', logoUrl: 'https://logo.clearbit.com/copilot.microsoft.com' },
+  { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', logoUrl: 'https://logo.clearbit.com/javascript.com' },
+  { name: 'Python', url: 'https://www.python.org', logoUrl: 'https://logo.clearbit.com/python.org' },
+  { name: 'Groovy', url: 'https://groovy-lang.org', logoUrl: 'https://logo.clearbit.com/groovy-lang.org' },
+  { name: 'Cursor', url: 'https://cursor.com', logoUrl: 'https://logo.clearbit.com/cursor.sh' },
+  { name: 'MySQL', url: 'https://www.mysql.com', logoUrl: 'https://logo.clearbit.com/mysql.com' },
+  { name: 'GitHub', url: 'https://github.com', logoUrl: 'https://logo.clearbit.com/github.com' },
+  { name: 'Figma', url: 'https://www.figma.com', logoUrl: 'https://logo.clearbit.com/figma.com' },
+  { name: 'IntelliJ', url: 'https://www.jetbrains.com/idea/', logoUrl: 'https://logo.clearbit.com/jetbrains.com' },
+  { name: 'Jasper', url: 'https://www.jaspersoft.com', logoUrl: 'https://logo.clearbit.com/jaspersoft.com' },
+];

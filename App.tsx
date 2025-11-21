@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
 import FeaturedProjects from './components/FeaturedProjects';
+import ToolsTicker from './components/ToolsTicker';
 import Research from './components/Research';
 import Contact from './components/Contact';
 import ChatBot from './components/ChatBot';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <FeaturedProjects />
+        <ToolsTicker />
         <Experience />
         <Research />
         <Contact />

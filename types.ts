@@ -37,3 +37,9 @@ export interface Project {
   coverImage?: string; // Full background image
   link?: string; // External URL
 }
+
+export interface Tool {
+  name: string;
+  url: string;
+  logoUrl: string;
+}

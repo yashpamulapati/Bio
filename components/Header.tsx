@@ -35,7 +35,7 @@ const Header: React.FC = () => {
               className="group flex flex-col items-center gap-1 text-neutral-400 hover:text-white transition-colors duration-300"
               aria-label={link.platform}
             >
-              {Icon && <Icon className="w-5 h-5" />}
+              {Icon && <Icon className="w-6 h-6" />}
               <span className="text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full mt-1 font-medium">
                 {link.platform}
               </span>

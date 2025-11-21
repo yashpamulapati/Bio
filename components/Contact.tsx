@@ -20,10 +20,17 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // In a real application, you would send the formData to a backend service here.
-    console.log('Submitting form:', formData);
+    const { name, email, subject, message } = formData;
+    
+    // Construct mailto link to open user's email client with pre-filled data
+    const mailtoUrl = `mailto:${PROFILE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+    
+    // Open the email client
+    window.location.href = mailtoUrl;
 
-    // Simulate success
+    // Show success notification (Simulating "Sent" state as the action is handed off to email client)
     setShowSuccess(true);
     
     // Reset form
@@ -48,8 +55,8 @@ const Contact: React.FC = () => {
         <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10 z-50 bg-white text-neutral-900 px-6 py-4 rounded-lg shadow-2xl border border-neutral-200 flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <CheckCircle className="w-5 h-5 text-green-600" />
           <div>
-            <h4 className="font-medium text-sm">Message Sent Successfully</h4>
-            <p className="text-xs text-neutral-500">Thank you for reaching out.</p>
+            <h4 className="font-medium text-sm">Opening Email Client...</h4>
+            <p className="text-xs text-neutral-500">Please click Send in your email app.</p>
           </div>
         </div>
       )}

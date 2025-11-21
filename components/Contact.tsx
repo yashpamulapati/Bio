@@ -1,10 +1,59 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { PROFILE } from '../constants';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // In a real application, you would send the formData to a backend service here.
+    console.log('Submitting form:', formData);
+
+    // Simulate success
+    setShowSuccess(true);
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+
+    // Hide notification after 3 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3000);
+  };
+
   return (
-    <section id="contact" className="bg-neutral-900 py-24 px-6 md:px-20 lg:px-32 text-neutral-50">
+    <section id="contact" className="bg-neutral-900 py-24 px-6 md:px-20 lg:px-32 text-neutral-50 relative">
+      
+      {/* Success Notification Toast */}
+      {showSuccess && (
+        <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10 z-50 bg-white text-neutral-900 px-6 py-4 rounded-lg shadow-2xl border border-neutral-200 flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <CheckCircle className="w-5 h-5 text-green-600" />
+          <div>
+            <h4 className="font-medium text-sm">Message Sent Successfully</h4>
+            <p className="text-xs text-neutral-500">Thank you for reaching out.</p>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-5xl mx-auto">
         
         {/* Section Header */}
@@ -27,13 +76,16 @@ const Contact: React.FC = () => {
           {/* Left: Contact Form */}
           <div className="space-y-8">
             <h4 className="text-xl font-medium text-neutral-200">Send Message</h4>
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold">Name</label>
                 <input 
                   type="text" 
                   id="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your name"
+                  required
                   className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors"
                 />
               </div>
@@ -43,7 +95,10 @@ const Contact: React.FC = () => {
                 <input 
                   type="email" 
                   id="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="your@email.com"
+                  required
                   className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors"
                 />
               </div>
@@ -53,7 +108,10 @@ const Contact: React.FC = () => {
                 <input 
                   type="text" 
                   id="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   placeholder="Project inquiry"
+                  required
                   className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors"
                 />
               </div>
@@ -63,12 +121,15 @@ const Contact: React.FC = () => {
                 <textarea 
                   id="message"
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Tell me about your project..."
+                  required
                   className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors resize-none"
                 ></textarea>
               </div>
 
-              <button className="w-full sm:w-auto px-8 py-3 bg-white text-neutral-900 font-medium rounded-md hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2 mt-4">
+              <button type="submit" className="w-full sm:w-auto px-8 py-3 bg-white text-neutral-900 font-medium rounded-md hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2 mt-4">
                 <Send className="w-4 h-4" />
                 Send Message
               </button>

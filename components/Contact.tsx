@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
             Let's Work Together
           </h3>
           <p className="text-neutral-400 text-lg max-w-2xl font-light leading-relaxed">
-            Have a construction or infrastructure project in mind? I'd love to discuss how 
+            Have a project in mind? I'd love to discuss how 
             we can bring your vision to reality.
           </p>
         </div>

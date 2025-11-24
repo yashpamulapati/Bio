@@ -14,15 +14,44 @@ const Research: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1: Research Summary */}
-          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-neutral-200/60 h-full flex flex-col">
-            <h3 className="text-2xl font-light text-neutral-900 mb-6 font-serif italic">
-              {RESEARCH.title}
-            </h3>
-            <p className="text-base text-neutral-600 leading-relaxed font-light">
-              {RESEARCH.summary}
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Card 1: Research Summary & Publication Merged */}
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-neutral-200/60 h-full flex flex-col justify-between">
+            <div>
+              <h3 className="text-2xl font-light text-neutral-900 mb-6 font-serif italic">
+                {RESEARCH.title}
+              </h3>
+              <p className="text-base text-neutral-600 leading-relaxed font-light mb-8">
+                {RESEARCH.summary}
+              </p>
+            </div>
+
+            {/* Publication Link Section */}
+            {RESEARCH.journalUrl && (
+              <a 
+                href={RESEARCH.journalUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 pt-6 border-t border-neutral-100 transition-colors mt-auto"
+              >
+                <div className="w-14 h-14 shrink-0 rounded-xl bg-neutral-50 p-3 border border-neutral-100 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  {RESEARCH.journalLogo ? (
+                     <img src={RESEARCH.journalLogo} alt="Journal Logo" className="w-full h-full object-contain" />
+                  ) : (
+                     <BookOpen className="w-6 h-6 text-neutral-400" />
+                  )}
+                </div>
+                
+                <div className="flex flex-col">
+                  <span className="text-sm font-medium text-neutral-900 group-hover:text-neutral-600 transition-colors">
+                    Read Publication
+                  </span>
+                  <span className="text-xs text-neutral-400 font-light flex items-center gap-1">
+                    Construction and Building Materials <ExternalLink className="w-3 h-3" />
+                  </span>
+                </div>
+              </a>
+            )}
           </div>
 
           {/* Card 2: Innovation / Methodology */}
@@ -38,34 +67,6 @@ const Research: React.FC = () => {
             </p>
           </div>
 
-          {/* Card 3: Journal Link */}
-          {RESEARCH.journalUrl && (
-            <a 
-              href={RESEARCH.journalUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-neutral-200/60 h-full flex flex-col items-center justify-center text-center hover:border-neutral-300 hover:shadow-md transition-all duration-300"
-            >
-              <div className="w-20 h-20 mb-6 rounded-xl bg-neutral-50 p-3 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                {RESEARCH.journalLogo ? (
-                   <img src={RESEARCH.journalLogo} alt="Journal Logo" className="w-full h-full object-contain" />
-                ) : (
-                   <BookOpen className="w-8 h-8 text-neutral-400" />
-                )}
-              </div>
-              
-              <h4 className="text-lg font-medium text-neutral-900 mb-2">
-                Read Publication
-              </h4>
-              <p className="text-sm text-neutral-500 font-light mb-6">
-                Construction and Building Materials
-              </p>
-              
-              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-neutral-900 group-hover:text-neutral-600">
-                View on ScienceDirect <ExternalLink className="w-3 h-3" />
-              </span>
-            </a>
-          )}
         </div>
       </div>
     </section>

@@ -1,10 +1,9 @@
-
 import { Experience, Research, SocialLink, Project, Tool } from './types';
 
 export const PROFILE = {
   name: "Yash Pamulapati",
   title: "Product Management Professional",
-  shortBio: "Product Consultant at Trimble supporting B2B SaaS products",
+  shortBio: "Product Consultant at Trimble supporting B2B SaaS products currently managing $1.5M+ ARR",
   email: "yashwanth.pamulapati@gmail.com",
   phone: "225-371-2596",
   location: "Oklahoma City, OK",

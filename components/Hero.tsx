@@ -18,10 +18,10 @@ const Hero: React.FC = () => {
         
         {/* Name Block */}
         <div className="space-y-2">
-          <span className="text-base md:text-lg text-neutral-500 font-light block mb-2">
+          <span className="text-sm md:text-base text-neutral-500 font-light block mb-2">
             I'm
           </span>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-neutral-900">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light tracking-tight text-neutral-900">
             {PROFILE.name}
           </h1>
         </div>
@@ -29,7 +29,10 @@ const Hero: React.FC = () => {
         {/* Bio */}
         <div className="space-y-6 mt-8">
           <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto">
-            {PROFILE.shortBio}
+            Product Consultant at Trimble supporting B2B SaaS products
+            <span className="block mt-2">
+              Currently managing $1.5M+ ARR
+            </span>
           </p>
           
           <p className="text-sm md:text-base text-neutral-500 font-medium tracking-wide uppercase">

@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from 'lucide-react';
 import { PROFILE } from '../constants';
 
 const Contact: React.FC = () => {
@@ -11,40 +10,60 @@ const Contact: React.FC = () => {
     message: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     const { name, email, subject, message } = formData;
     
-    // Construct mailto link to open user's email client with pre-filled data
-    const mailtoUrl = `mailto:${PROFILE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    )}`;
-    
-    // Open the email client
-    window.location.href = mailtoUrl;
+    try {
+      // Use FormSubmit.co for backend-less email handling
+      const response = await fetch(`https://formsubmit.co/ajax/${PROFILE.email}`, {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name,
+            email,
+            subject,
+            message,
+            _subject: `${subject} - Portfolio Contact`, // Custom subject line for the email you receive
+            _template: 'table',
+            _captcha: 'false'
+        })
+      });
 
-    // Show success notification (Simulating "Sent" state as the action is handed off to email client)
-    setShowSuccess(true);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-
-    // Hide notification after 3 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 3000);
+      if (response.ok) {
+        setShowSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        // Hide notification after 5 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 5000);
+      } else {
+        alert("Something went wrong. Please try again or email me directly.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      // Fallback behavior could go here, but alerting is safer for now
+      alert("Something went wrong. Please check your connection or email me directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,8 +74,8 @@ const Contact: React.FC = () => {
         <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10 z-50 bg-white text-neutral-900 px-6 py-4 rounded-lg shadow-2xl border border-neutral-200 flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <CheckCircle className="w-5 h-5 text-green-600" />
           <div>
-            <h4 className="font-medium text-sm">Opening Email Client...</h4>
-            <p className="text-xs text-neutral-500">Please click Send in your email app.</p>
+            <h4 className="font-medium text-sm">Message Sent Successfully!</h4>
+            <p className="text-xs text-neutral-500">Thank you for reaching out. I'll respond shortly.</p>
           </div>
         </div>
       )}
@@ -93,7 +112,8 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   placeholder="Your name"
                   required
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors disabled:opacity-50"
                 />
               </div>
               
@@ -106,7 +126,8 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   placeholder="your@email.com"
                   required
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors disabled:opacity-50"
                 />
               </div>
               
@@ -119,7 +140,8 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   placeholder="Project inquiry"
                   required
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors disabled:opacity-50"
                 />
               </div>
               
@@ -132,13 +154,27 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   placeholder="Tell me about your project..."
                   required
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors resize-none"
+                  disabled={isSubmitting}
+                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors resize-none disabled:opacity-50"
                 ></textarea>
               </div>
 
-              <button type="submit" className="w-full sm:w-auto px-8 py-3 bg-white text-neutral-900 font-medium rounded-md hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2 mt-4">
-                <Send className="w-4 h-4" />
-                Send Message
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full sm:w-auto px-8 py-3 bg-white text-neutral-900 font-medium rounded-md hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>

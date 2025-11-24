@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PROFILE } from '../constants';
 import { ArrowDown } from 'lucide-react';
@@ -19,18 +18,24 @@ const Hero: React.FC = () => {
         
         {/* Name Block */}
         <div className="space-y-2">
-          <span className="text-lg md:text-xl text-neutral-500 font-light block mb-2">
+          <span className="text-base md:text-lg text-neutral-500 font-light block mb-2">
             I'm
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-neutral-900">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-neutral-900">
             {PROFILE.name}
           </h1>
         </div>
 
         {/* Bio */}
-        <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto mt-8">
-          {PROFILE.shortBio}
-        </p>
+        <div className="space-y-6 mt-8">
+          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto">
+            {PROFILE.shortBio}
+          </p>
+          
+          <p className="text-sm md:text-base text-neutral-500 font-medium tracking-wide uppercase">
+            Product Management | Solutions Engineering | Implementations
+          </p>
+        </div>
 
       </div>
       

@@ -4,7 +4,7 @@ import { Experience, Research, SocialLink, Project, Tool } from './types';
 export const PROFILE = {
   name: "Yash Pamulapati",
   title: "Product Management Professional",
-  shortBio: "Currently serving as a Product-Focused Technical Consultant at Trimble, where I lead B2B SaaS implementations and drive product management activities for State Departments of Transportation (DOTs). My expertise spans full lifecycle technical delivery, including API integration strategy, complex workflow customizations, and comprehensive release coordination (encompassing survey analysis, user feedback integration, UAT, and deployment management).",
+  shortBio: "Product Consultant at Trimble supporting B2B SaaS products",
   email: "yashwanth.pamulapati@gmail.com",
   phone: "225-371-2596",
   location: "Oklahoma City, OK",

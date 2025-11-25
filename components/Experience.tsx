@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
                 className="shrink-0 relative block"
                 title={`Visit ${job.company}`}
               >
-                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md hover:scale-105 transition-all duration-300 bg-white flex items-center justify-center grayscale group-hover:grayscale-0">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md hover:scale-105 transition-all duration-300 bg-white flex items-center justify-center">
                   <img 
                     src={job.logoUrl} 
                     alt={`${job.company} logo`} 

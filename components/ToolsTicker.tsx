@@ -26,7 +26,7 @@ const ToolsTicker: React.FC = () => {
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 transform hover:scale-110"
+                className="group flex items-center justify-center transition-all duration-300 transform hover:scale-110"
                 title={tool.name}
               >
                 <img 

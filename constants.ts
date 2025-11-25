@@ -125,7 +125,7 @@ export const RESEARCH: Research = {
   title: "Self-Healing Technology",
   summary: "Investigated artificial healing of asphaltic materials using metallic fibers and induction heating to recover cracking damage.",
   innovationTitle: "Civil to Software Transition",
-  innovationSummary: "My transition was organic. My research involved analyzing millions of data points. In the field, I leveraged Procore for project management and Autodesk/Bentley products for design. Being a tech enthusiast working on the software side of construction, pivoting to Product Management for enterprise applications was a natural evolution.",
+  innovationSummary: "While I started my career with Construction and Design engineering, my transition to software was instinctive. By analyzing data at scale and leading cross-functional teams, I developed a strong foundation in data analysis, problem solving & stakeholder management early on. As a tech enthusiast focused on the software side of delivery, pivoting to Product Management was organic and seamless evolution—shifting from using enterprise tools to building them.",
   journalUrl: 'https://www.sciencedirect.com/science/article/abs/pii/S0950061817307171?via%3Dihub',
   journalLogo: 'https://logo.clearbit.com/sciencedirect.com'
 };
@@ -133,7 +133,7 @@ export const RESEARCH: Research = {
 export const TOOLS: Tool[] = [
   { name: 'Anything AI', url: 'https://www.createanything.com/', logoUrl: 'https://logo.clearbit.com/createanything.com' },
   { name: 'Grok', url: 'https://x.ai/grok', logoUrl: 'https://www.google.com/s2/favicons?domain=x.ai&sz=128' },
-  { name: 'NotebookLM', url: 'https://notebooklm.google.com/', logoUrl: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/origin/notebooklm.png' },
+  { name: 'NotebookLM', url: 'https://notebooklm.google.com/', logoUrl: 'https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-png/origin/notebooklm.png' },
   { name: 'Google AI Studio', url: 'https://aistudio.google.com/apps', logoUrl: 'https://logo.clearbit.com/ai.google.dev' },
   { name: 'Claude', url: 'https://claude.ai', logoUrl: 'https://logo.clearbit.com/anthropic.com' },
   { name: 'Microsoft 365 Copilot', url: 'https://www.microsoft.com/en-us/microsoft-365-copilot', logoUrl: 'https://logo.clearbit.com/copilot.microsoft.com' },
@@ -146,4 +146,8 @@ export const TOOLS: Tool[] = [
   { name: 'Figma', url: 'https://www.figma.com', logoUrl: 'https://logo.clearbit.com/figma.com' },
   { name: 'IntelliJ', url: 'https://www.jetbrains.com/idea/', logoUrl: 'https://logo.clearbit.com/jetbrains.com' },
   { name: 'Jasper', url: 'https://www.jaspersoft.com', logoUrl: 'https://logo.clearbit.com/jaspersoft.com' },
+  { name: 'Autodesk', url: 'https://www.autodesk.com', logoUrl: 'https://logo.clearbit.com/autodesk.com' },
+  { name: 'Bentley Systems', url: 'https://www.bentley.com', logoUrl: 'https://logo.clearbit.com/bentley.com' },
+  { name: 'Power BI', url: 'https://powerbi.microsoft.com', logoUrl: 'https://logo.clearbit.com/powerbi.microsoft.com' },
+  { name: 'Tableau', url: 'https://www.tableau.com', logoUrl: 'https://logo.clearbit.com/tableau.com' },
 ];

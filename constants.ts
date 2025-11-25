@@ -4,7 +4,7 @@ import { Experience, Research, SocialLink, Project, Tool } from './types';
 export const PROFILE = {
   name: "Yash Pamulapati",
   title: "Product Management Professional",
-  shortBio: "Product Consultant at Trimble supporting B2B SaaS products currently managing $1.5M+ ARR",
+  shortBio: "Product Consultant at Trimble supporting B2B SaaS products",
   email: "yashwanth.pamulapati@gmail.com",
   phone: "225-371-2596",
   location: "Oklahoma City, OK",
@@ -133,7 +133,7 @@ export const RESEARCH: Research = {
 export const TOOLS: Tool[] = [
   { name: 'Anything AI', url: 'https://www.createanything.com/', logoUrl: 'https://logo.clearbit.com/createanything.com' },
   { name: 'Grok', url: 'https://x.ai/grok', logoUrl: 'https://www.google.com/s2/favicons?domain=x.ai&sz=128' },
-  { name: 'NotebookLM', url: 'https://notebooklm.google.com/', logoUrl: 'https://raw.githubusercontent.com/lobehub/lobe-icons/master/packages/static-png/origin/notebooklm.png' },
+  { name: 'NotebookLM', url: 'https://notebooklm.google.com/', logoUrl: 'https://cdn.jsdelivr.net/gh/lobehub/lobe-icons@master/packages/static-png/origin/notebooklm.png' },
   { name: 'Google AI Studio', url: 'https://aistudio.google.com/apps', logoUrl: 'https://logo.clearbit.com/ai.google.dev' },
   { name: 'Claude', url: 'https://claude.ai', logoUrl: 'https://logo.clearbit.com/anthropic.com' },
   { name: 'Microsoft 365 Copilot', url: 'https://www.microsoft.com/en-us/microsoft-365-copilot', logoUrl: 'https://logo.clearbit.com/copilot.microsoft.com' },

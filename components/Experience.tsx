@@ -1,6 +1,6 @@
+
 import React from 'react';
 import { EXPERIENCES } from '../constants';
-import { ExternalLink } from 'lucide-react';
 
 const Experience: React.FC = () => {
   return (
@@ -26,11 +26,11 @@ const Experience: React.FC = () => {
                 className="shrink-0 relative block"
                 title={`Visit ${job.company}`}
               >
-                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md hover:scale-105 transition-all duration-300 bg-white flex items-center justify-center">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md hover:scale-105 transition-all duration-300 bg-white flex items-center justify-center p-2">
                   <img 
                     src={job.logoUrl} 
                     alt={`${job.company} logo`} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </a>

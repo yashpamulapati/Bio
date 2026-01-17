@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce text-neutral-400">
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce text-neutral-400 z-10">
         <ArrowDown className="w-6 h-6" />
       </div>
       

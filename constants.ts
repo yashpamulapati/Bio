@@ -97,12 +97,13 @@ export const EXPERIENCES: Experience[] = [
 
 export const FEATURED_PROJECTS: Project[] = [
   {
-    id: 'OwtentO',
-    title: 'OwtentO',
-    category: 'B2B Web & Mobile Application',
-    description: 'A streamlined platform for owner and tenant documentation and payments, designed specifically for private luxury holdings. Facilitates seamless document management and secure transactions.',
-    tags: ['Luxury PropTech', 'Mobile App', 'Payment Integration'],
-    link: 'https://yashpamulapati.dev'
+    id: 'services',
+    title: 'Web Development & Prototyping',
+    category: 'Services',
+    description: 'Specializing in transforming ideas into functional, interactive digital experiences efficiently.',
+    tags: ['Business Websites', 'Portfolios', 'Rapid Prototyping'],
+    link: '#contact',
+    coverImage: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'BuckB',
@@ -149,4 +150,5 @@ export const TOOLS: Tool[] = [
   { name: 'Bentley Systems', url: 'https://www.bentley.com', logoUrl: 'https://www.google.com/s2/favicons?domain=bentley.com&sz=128' },
   { name: 'Power BI', url: 'https://powerbi.microsoft.com', logoUrl: 'https://www.google.com/s2/favicons?domain=powerbi.microsoft.com&sz=128' },
   { name: 'Tableau', url: 'https://www.tableau.com', logoUrl: 'https://www.google.com/s2/favicons?domain=tableau.com&sz=128' },
+  { name: 'Google Antigravity', url: 'https://antigravity.google/', logoUrl: 'https://www.google.com/s2/favicons?domain=antigravity.google&sz=128' },
 ];

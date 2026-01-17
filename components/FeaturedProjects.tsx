@@ -9,11 +9,11 @@ const FeaturedProjects: React.FC = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <section id="projects" className="bg-neutral-700 py-20 px-6 md:px-20 lg:px-32 text-neutral-50">
+    <section id="projects" className="bg-neutral-600 py-20 px-6 md:px-20 lg:px-32 text-neutral-50">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="mb-10 border-b border-neutral-600 pb-6">
+        <div className="mb-10 border-b border-neutral-500/50 pb-6">
           <h2 className="text-3xl font-light text-white">
             Assets Under Construction
           </h2>
@@ -35,7 +35,7 @@ const FeaturedProjects: React.FC = () => {
               <CardTag 
                 key={project.id} 
                 {...cardProps}
-                className={`group relative overflow-hidden bg-neutral-900/30 border border-neutral-600/50 rounded-lg p-6 hover:bg-neutral-800 hover:border-neutral-400 transition-all duration-300 flex flex-col h-full ${isLink ? 'cursor-pointer block' : ''}`}
+                className={`group relative overflow-hidden bg-neutral-900/30 border border-neutral-500/50 rounded-lg p-6 hover:bg-neutral-800 hover:border-neutral-400 transition-all duration-300 flex flex-col h-full ${isLink ? 'cursor-pointer block' : ''}`}
               >
                 {/* Background Image Logic */}
                 {project.coverImage && (

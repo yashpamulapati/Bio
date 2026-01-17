@@ -46,6 +46,7 @@ export const PROFILE = {
   
   PROJECTS:
   - Owtento: A web and mobile application for owner and tenant documentation and payments for private luxury holdings.
+  - BuckBi: FnB marketplace for private chefs.
   - AgileAssets Implementation: Technical implementation for transportation asset management SaaS.
 
   RESEARCH:
@@ -106,12 +107,13 @@ export const FEATURED_PROJECTS: Project[] = [
     coverImage: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop'
   },
   {
-    id: 'BuckB',
-    title: 'BuckB',
-    category: 'D2C Web & Mobile Application',
-    description: 'An FnB app curated to professional chefs and cooks, personlaized options to manage their needs. Featuring |Snap Menu| a first of a kind app with no more than 5 clicks and customers spending no more than 2min from start to complete payment',
-    tags: ['Snap Menu', 'Tracking', 'Payment'],
-    link: 'https://yashpamulapati.dev'
+    id: 'ventures',
+    title: 'Startup Ventures',
+    category: 'Startups',
+    description: "Currently building two startups: 'OtentO', a luxury proptech platform, and 'BuckBi', an FnB solution connecting private chefs with customers.",
+    tags: ['OtentO', 'BuckBi', 'PropTech', 'FoodTech'],
+    link: '#contact',
+    coverImage: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'highway-design',

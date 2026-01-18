@@ -5,7 +5,7 @@ import { BookOpen, ExternalLink, Lightbulb, GraduationCap } from 'lucide-react';
 
 const Research: React.FC = () => {
   return (
-    <section className="py-20 bg-neutral-100 border-t border-neutral-200">
+    <section className="py-20 bg-neutral-200 border-t border-neutral-300">
       <div className="px-6 md:px-20 lg:px-32 max-w-[1400px] mx-auto">
         
         {/* Header */}

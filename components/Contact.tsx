@@ -68,12 +68,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-neutral-900 py-24 px-6 md:px-20 lg:px-32 text-neutral-50 relative">
+    <section id="contact" className="bg-neutral-900 py-24 px-6 md:px-20 lg:px-32 text-white relative border-t border-neutral-800">
       
       {/* Success Notification Toast */}
       {showSuccess && (
         <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10 z-50 bg-white text-neutral-900 px-6 py-4 rounded-lg shadow-2xl border border-neutral-200 flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <CheckCircle className="w-5 h-5 text-green-600" />
+          <CheckCircle className="w-5 h-5 text-green-500" />
           <div>
             <h4 className="font-medium text-sm">Message Sent Successfully!</h4>
             <p className="text-xs text-neutral-500">Thank you for reaching out. I'll respond shortly.</p>
@@ -85,10 +85,7 @@ const Contact: React.FC = () => {
         
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <div className="flex flex-col items-center pt-2 mb-8">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500">Contact</span>
-            <div className="h-px w-12 bg-neutral-700 mt-2"></div>
-          </div>
+          {/* Label removed */}
           
           <h3 className="text-4xl md:text-5xl font-light mb-6 text-white">
             Let's Work Together
@@ -100,11 +97,11 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-neutral-800/50 p-8 md:p-10 rounded-2xl border border-neutral-800 backdrop-blur-sm">
+        <div className="bg-neutral-800 p-8 md:p-10 rounded-2xl border border-neutral-700 shadow-sm">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="name" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold">Name</label>
+                  <label htmlFor="name" className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">Name</label>
                   <input 
                     type="text" 
                     id="name"
@@ -113,12 +110,12 @@ const Contact: React.FC = () => {
                     placeholder="Your name"
                     required
                     disabled={isSubmitting}
-                    className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors disabled:opacity-50"
+                    className="w-full bg-neutral-900 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors disabled:opacity-50"
                   />
                 </div>
                 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold">Email</label>
+                  <label htmlFor="email" className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">Email</label>
                   <input 
                     type="email" 
                     id="email"
@@ -127,13 +124,13 @@ const Contact: React.FC = () => {
                     placeholder="your@email.com"
                     required
                     disabled={isSubmitting}
-                    className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors disabled:opacity-50"
+                    className="w-full bg-neutral-900 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors disabled:opacity-50"
                   />
                 </div>
               </div>
               
               <div className="flex flex-col gap-2">
-                <label htmlFor="subject" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold">Subject</label>
+                <label htmlFor="subject" className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">Subject</label>
                 <input 
                   type="text" 
                   id="subject"
@@ -142,12 +139,12 @@ const Contact: React.FC = () => {
                   placeholder="Project inquiry"
                   required
                   disabled={isSubmitting}
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors disabled:opacity-50"
+                  className="w-full bg-neutral-900 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors disabled:opacity-50"
                 />
               </div>
               
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold">Message</label>
+                <label htmlFor="message" className="text-xs uppercase tracking-wider text-neutral-400 font-semibold">Message</label>
                 <textarea 
                   id="message"
                   rows={5}
@@ -156,7 +153,7 @@ const Contact: React.FC = () => {
                   placeholder="Tell me about your project..."
                   required
                   disabled={isSubmitting}
-                  className="w-full bg-neutral-800 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-600 focus:outline-none focus:border-neutral-500 focus:ring-1 focus:ring-neutral-500 transition-colors resize-none disabled:opacity-50"
+                  className="w-full bg-neutral-900 border border-neutral-700 rounded-md px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none disabled:opacity-50"
                 ></textarea>
               </div>
 

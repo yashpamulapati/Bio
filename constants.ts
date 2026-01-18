@@ -4,7 +4,7 @@ import { Experience, Research, SocialLink, Project, Tool } from './types';
 export const PROFILE = {
   name: "Yash Pamulapati",
   title: "Product Management Professional",
-  shortBio: "Product Consultant at Trimble supporting B2B SaaS products",
+  shortBio: "Senior Consultant at Trimble supporting B2B SaaS applications",
   email: "yashwanth.pamulapati@gmail.com",
   phone: "225-371-2596",
   location: "Oklahoma City, OK",
@@ -20,7 +20,7 @@ export const PROFILE = {
   Product management professional with over 3 years as product owner and software consulting in enterprise software solutions, complimented by more than 4 years as a civil project engineer. Proficient in delivering complex B2B enterprise SaaS products for mobile and web applications, SDLC, implementations, and solutions consulting.
 
   EXPERIENCE:
-  1. Product Consultant at Trimble Inc. (Oklahoma City, OK) | May 2022 – Present
+  1. Senior Consultant at Trimble Inc. (Oklahoma City, OK) | May 2022 – Present
      - Technical Product Owner for Oklahoma account API projects.
      - Lead the $1.5M ARR account as SME & Lead Analyst.
      - Managed Jenkins CI/CD pipelines and end-to-end SDLC.
@@ -70,7 +70,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: 'trimble',
     company: 'Trimble Inc.',
-    role: 'Product Consultant',
+    role: 'Senior Consultant',
     period: 'May 2022 – Present',
     description: 'Serving as Technical Product Owner for Oklahoma account API projects, managing product backlogs, sprint planning, and decision making. Lead a $1.5M ARR account as SME & Lead Analyst, overseeing client portfolios and vendor management. Drive product enhancements and enterprise compliance via strategic data analysis and cross-functional collaboration.',
     website: 'https://assetlifecycle.trimble.com/en',
@@ -135,6 +135,7 @@ export const RESEARCH: Research = {
 
 export const TOOLS: Tool[] = [
   { name: 'Anything AI', url: 'https://www.createanything.com/', logoUrl: 'https://www.google.com/s2/favicons?domain=createanything.com&sz=128' },
+  { name: 'Perplexity', url: 'https://www.perplexity.ai/', logoUrl: 'https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128' },
   { name: 'Grok', url: 'https://x.ai/grok', logoUrl: 'https://www.google.com/s2/favicons?domain=x.ai&sz=128' },
   { name: 'Google AI Studio', url: 'https://aistudio.google.com/apps', logoUrl: 'https://www.google.com/s2/favicons?domain=ai.google.dev&sz=128' },
   { name: 'Claude', url: 'https://claude.ai', logoUrl: 'https://www.google.com/s2/favicons?domain=anthropic.com&sz=128' },
@@ -150,7 +151,7 @@ export const TOOLS: Tool[] = [
   { name: 'Jasper', url: 'https://www.jaspersoft.com', logoUrl: 'https://www.google.com/s2/favicons?domain=jaspersoft.com&sz=128' },
   { name: 'Autodesk', url: 'https://www.autodesk.com', logoUrl: 'https://www.google.com/s2/favicons?domain=autodesk.com&sz=128' },
   { name: 'Bentley Systems', url: 'https://www.bentley.com', logoUrl: 'https://www.google.com/s2/favicons?domain=bentley.com&sz=128' },
-  { name: 'Power BI', url: 'https://powerbi.microsoft.com', logoUrl: 'https://www.google.com/s2/favicons?domain=powerbi.microsoft.com&sz=128' },
+  { name: 'n8n', url: 'https://n8n.io/', logoUrl: 'https://www.google.com/s2/favicons?domain=n8n.io&sz=128' },
   { name: 'Tableau', url: 'https://www.tableau.com', logoUrl: 'https://www.google.com/s2/favicons?domain=tableau.com&sz=128' },
   { name: 'Google Antigravity', url: 'https://antigravity.google/', logoUrl: 'https://www.google.com/s2/favicons?domain=antigravity.google&sz=128' },
 ];

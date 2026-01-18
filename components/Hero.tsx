@@ -5,8 +5,20 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen flex flex-col justify-center items-center bg-neutral-50 overflow-hidden px-6">
+    <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-6">
       
+      {/* Animated Background Layers */}
+      <div className="absolute inset-0 w-full h-full -z-10">
+        {/* Base Gradient: More visible Pastel Blue fading to White */}
+        {/* Increased saturation slightly (blue-200 start) to ensure visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-200/60 via-blue-50/80 to-white" />
+        
+        {/* Moving blobs - increased opacity and used slightly darker pastel shades for contrast */}
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-300/40 blur-[80px] animate-blob mix-blend-multiply" />
+        <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-200/40 blur-[80px] animate-blob animation-delay-2000 mix-blend-multiply" />
+        <div className="absolute top-[20%] left-[20%] w-[60%] h-[60%] rounded-full bg-indigo-200/40 blur-[100px] animate-blob animation-delay-4000 mix-blend-multiply" />
+      </div>
+
       {/* Greeting - Positioned at the top */}
       <div className="absolute top-28 md:top-36 w-full text-center z-10">
         <span className="text-2xl md:text-3xl text-neutral-600 font-light tracking-wide">
@@ -30,14 +42,14 @@ const Hero: React.FC = () => {
         {/* Bio */}
         <div className="space-y-6 mt-8">
           <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto">
-            Product Consultant at Trimble supporting B2B SaaS products
+            Senior Consultant at Trimble supporting B2B SaaS applications
             <span className="block mt-2">
               Currently managing $1.5M+ ARR
             </span>
           </p>
           
           <p className="text-sm md:text-base text-neutral-500 font-medium tracking-wide uppercase">
-            Product Management | Solutions Engineering | Implementations
+            Product Management | Solutions Engineering | Professional Services
           </p>
         </div>
 

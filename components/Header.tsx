@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Mail, Github, Linkedin, FolderKanban } from 'lucide-react';
 import { SOCIALS } from '../constants';
@@ -20,8 +21,22 @@ const Header: React.FC = () => {
     }
   };
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-end items-center p-6 md:p-8 mix-blend-difference text-white pointer-events-none">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 md:p-8 mix-blend-difference text-white pointer-events-none">
+      {/* Logo */}
+      <a 
+        href="#" 
+        onClick={scrollToTop}
+        className="pointer-events-auto text-3xl font-bold tracking-tighter hover:opacity-80 transition-opacity select-none"
+      >
+        YP.
+      </a>
+
       <nav className="flex gap-6 pointer-events-auto">
         {SOCIALS.map((link) => {
           const Icon = IconMap[link.icon];

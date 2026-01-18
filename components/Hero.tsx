@@ -56,8 +56,10 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce text-neutral-400 z-10">
-        <ArrowDown className="w-6 h-6" />
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+         <div className="animate-bounce">
+            <ArrowDown className="w-10 h-10 text-neutral-400/80 animate-pulse" />
+         </div>
       </div>
       
     </section>

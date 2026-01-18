@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       {/* Greeting - Positioned at the top */}
       <div className="absolute top-28 md:top-36 w-full text-center z-10">
         <span className="text-2xl md:text-3xl text-neutral-600 font-light tracking-wide">
-          Hello and Welcome
+          Hi
         </span>
       </div>
 

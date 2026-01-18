@@ -36,21 +36,21 @@ const FeaturedProjects: React.FC = () => {
               <CardTag 
                 key={project.id} 
                 {...cardProps}
-                className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 flex flex-col h-full md:col-span-2 min-h-[350px] ${
+                className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 flex flex-col h-full md:col-span-2 min-h-[350px] bg-neutral-900 ${
                     isLink ? 'cursor-pointer block' : ''
                 } ${
                     hasCover 
                     ? 'shadow-sm hover:shadow-xl' 
-                    : 'bg-neutral-900 border border-neutral-700 shadow-sm hover:shadow-xl hover:border-neutral-600'
+                    : 'border border-neutral-700 shadow-sm hover:shadow-xl hover:border-neutral-600'
                 }`}
               >
                 {/* Background Image Logic */}
                 {hasCover && (
-                  <div className="absolute inset-0 z-0">
+                  <div className="absolute inset-0 z-0 bg-neutral-900">
                     <img 
                       src={project.coverImage} 
                       alt={project.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40"
                     />
                     {/* Gradient Overlay for readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />

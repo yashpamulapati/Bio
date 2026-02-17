@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
           </p>
           
           <p className="text-sm md:text-base text-neutral-500 font-medium tracking-wide uppercase">
-            Product Management | Solutions Engineering | Professional Services
+            Project & Product Management | Solutions Engineering | Professional Services
           </p>
         </div>
 

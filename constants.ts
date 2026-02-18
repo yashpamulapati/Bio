@@ -71,9 +71,9 @@ export const EXPERIENCES: Experience[] = [
   {
     id: 'trimble',
     company: 'Trimble Inc.',
-    role: 'Senior Consultant',
+    role: 'Lead Consultant',
     period: 'May 2022 – Present',
-    description: 'Serving as Technical Product Owner for Oklahoma account API projects, managing product backlogs, sprint planning, and decision making. Lead a $1.5M ARR account as SME & Lead Analyst, overseeing client portfolios and vendor management. Drive product enhancements and enterprise compliance via strategic data analysis and cross-functional collaboration.',
+    description: 'Serve as Technical Product Owner and Project Manager for Trimble\'s SaaS Asset Management products, leading API and enhancement projects. Responsible for managing product backlogs, sprint planning, and strategic decision-making. Additionally act as SME and Lead Analyst for a $1.5M ARR account, overseeing client portfolios and vendor management while driving product enhancements and enterprise compliance through strategic data analysis and cross-functional collaboration.',
     website: 'https://assetlifecycle.trimble.com/en',
     logoUrl: 'https://www.google.com/s2/favicons?domain=trimble.com&sz=256' 
   },

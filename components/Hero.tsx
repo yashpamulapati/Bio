@@ -9,7 +9,10 @@ const Hero: React.FC = () => {
     <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-6">
       
       {/* Wavy lines - bottom half background */}
-      <WavyLines />
+      <WavyLines
+        className="absolute bottom-0 left-0 right-0"
+        style={{ height: '30%', zIndex: 1 }}
+      />
 
       {/* Background: gradient + blobs */}
       <div className="absolute inset-0 w-full h-full -z-10">

@@ -109,7 +109,7 @@ export const FEATURED_PROJECTS: Project[] = [
   },
   {
     id: 'ventures',
-    title: 'Startup Ventures',
+    title: 'Explorations',
     category: 'Startups',
     description: "Currently building two startups: 'OtentO', a luxury proptech platform, and 'BuckBi', an FnB solution connecting private chefs with customers.",
     tags: ['OtentO', 'BuckBi', 'PropTech', 'FoodTech'],

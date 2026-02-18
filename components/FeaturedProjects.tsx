@@ -1,13 +1,11 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { FEATURED_PROJECTS } from '../constants';
-import { Plus } from 'lucide-react';
 import { BlueprintBg } from './SectionConstructionBgs';
 
 const FeaturedProjects: React.FC = () => {
   // Show only first 2 real projects, 3rd slot is the placeholder
   const projectsToShow = FEATURED_PROJECTS.slice(0, 2);
-  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <section id="projects" className="relative bg-neutral-800 py-20 px-6 md:px-20 lg:px-32 text-white overflow-hidden">
@@ -17,12 +15,12 @@ const FeaturedProjects: React.FC = () => {
         {/* Section Header */}
         <div className="mb-10 border-b border-neutral-700 pb-6">
           <h2 className="text-3xl font-light text-white">
-            Assets Under Construction
+            Beyond the 9-to-5
           </h2>
         </div>
 
         {/* Grid - Adjusted for larger project cards and narrower placeholder */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Real Projects */}
           {projectsToShow.map((project) => {
             const isLink = !!project.link;
@@ -38,7 +36,7 @@ const FeaturedProjects: React.FC = () => {
               <CardTag 
                 key={project.id} 
                 {...cardProps}
-                className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 flex flex-col h-full md:col-span-2 min-h-[350px] bg-neutral-900 ${
+                className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 flex flex-col h-full bg-neutral-900 ${
                     isLink ? 'cursor-pointer block' : ''
                 } ${
                     hasCover 
@@ -110,19 +108,40 @@ const FeaturedProjects: React.FC = () => {
             );
           })}
 
-          {/* 3rd Card: Interactive Placeholder */}
-          <button
-            onClick={() => setIsClicked(!isClicked)}
-            className="group bg-neutral-900 border border-neutral-700 border-dashed rounded-2xl p-6 hover:bg-neutral-800 hover:border-neutral-500 hover:shadow-md transition-all duration-300 flex flex-col h-full items-center justify-center cursor-pointer min-h-[350px] focus:outline-none md:col-span-1"
-          >
-            {isClicked ? (
-              <span className="text-neutral-400 font-medium text-sm animate-in fade-in zoom-in duration-300 text-center">
-                More Projects <br /> Coming Soon
-              </span>
-            ) : (
-              <Plus className="w-8 h-8 text-neutral-600 group-hover:text-neutral-400 transition-colors duration-300" />
-            )}
-          </button>
+          {/* Hobbies & Lifestyle Card */}
+          <div className="group relative overflow-hidden rounded-2xl p-6 flex flex-col h-full bg-neutral-900 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div className="absolute inset-0 z-0 bg-neutral-900">
+              <img
+                src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=2073&auto=format&fit=crop"
+                alt="Hobbies & Fun Time"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+            </div>
+            <div className="relative z-10 flex flex-col h-full">
+              <div className="mb-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-neutral-300 group-hover:text-white transition-colors">
+                  Lifestyle
+                </span>
+                <h3 className="text-2xl font-medium mt-2 text-white">
+                  Hobbies & Fun Time
+                </h3>
+              </div>
+              <p className="text-base leading-relaxed mb-6 font-light text-neutral-200 flex-grow">
+                Exploring new cities, trying new foods, hiking trails, and dancing — previously performed at university cultural events across Louisiana.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/20">
+                {['Travel', 'Hiking', 'Dancing', 'Food'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-1 text-[10px] uppercase tracking-wide rounded border bg-black/40 text-neutral-300 border-white/20 group-hover:border-white/50 transition-colors"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
 
         </div>
 

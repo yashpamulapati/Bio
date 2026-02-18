@@ -65,6 +65,7 @@
       .animation-delay-4000 {
         animation-delay: 4s;
       }
+
     </style>
   <script type="importmap">
 {
@@ -79,7 +80,11 @@
 </script>
 </head>
   <body class="bg-neutral-50 text-neutral-900 antialiased selection:bg-neutral-200 selection:text-neutral-900">
-    <div id="root"></div>
+    <div id="root">
+      <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:system-ui;color:#525252;">
+        Loading…
+      </div>
+    </div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

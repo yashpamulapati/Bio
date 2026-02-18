@@ -2,18 +2,18 @@
 import React from 'react';
 import { PROFILE } from '../constants';
 import { ArrowDown } from 'lucide-react';
+import WavyLines from './WavyLines';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-6">
       
-      {/* Animated Background Layers */}
+      {/* Wavy lines - bottom half background */}
+      <WavyLines />
+
+      {/* Background: gradient + blobs */}
       <div className="absolute inset-0 w-full h-full -z-10">
-        {/* Base Gradient: More visible Pastel Blue fading to White */}
-        {/* Increased saturation slightly (blue-200 start) to ensure visibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-200/60 via-blue-50/80 to-white" />
-        
-        {/* Moving blobs - increased opacity and used slightly darker pastel shades for contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-200/60 via-blue-50/30 to-transparent" />
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-300/40 blur-[80px] animate-blob mix-blend-multiply" />
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-200/40 blur-[80px] animate-blob animation-delay-2000 mix-blend-multiply" />
         <div className="absolute top-[20%] left-[20%] w-[60%] h-[60%] rounded-full bg-indigo-200/40 blur-[100px] animate-blob animation-delay-4000 mix-blend-multiply" />

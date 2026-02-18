@@ -36,14 +36,25 @@ const Experience: React.FC = () => {
                 onClick={() => setActiveId(job.id)}
                 className={`group relative text-left px-5 py-4 rounded-xl transition-all duration-300 ${
                   isActive
-                    ? 'bg-neutral-700 text-white shadow-lg shadow-neutral-700/10'
-                    : 'bg-transparent text-neutral-500 hover:bg-neutral-100 hover:text-neutral-700'
+                    ? 'text-neutral-800 scale-[1.02]'
+                    : 'text-neutral-500 hover:text-neutral-700 hover:scale-[1.01]'
                 }`}
+                style={{
+                  background: isActive
+                    ? 'linear-gradient(135deg, rgba(187, 247, 208, 0.4) 0%, rgba(220, 252, 231, 0.3) 50%, rgba(187, 247, 208, 0.2) 100%)'
+                    : 'linear-gradient(135deg, rgba(212, 212, 216, 0.25) 0%, rgba(228, 228, 231, 0.2) 50%, rgba(212, 212, 216, 0.15) 100%)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: isActive
+                    ? '1px solid rgba(187, 247, 208, 0.5)'
+                    : '1px solid rgba(212, 212, 216, 0.35)',
+                  boxShadow: isActive
+                    ? '0 4px 20px rgba(187, 247, 208, 0.15), inset 0 1px 0 rgba(255,255,255,0.5)'
+                    : '0 2px 12px rgba(161, 161, 170, 0.06), inset 0 1px 0 rgba(255,255,255,0.4)',
+                }}
               >
                 <div className="flex items-center gap-3">
-                  <div className={`w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-1 ${
-                    isActive ? 'bg-white' : 'bg-neutral-100 group-hover:bg-white'
-                  } transition-colors`}>
+                  <div className={`w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center p-1 bg-white/70 transition-colors`}>
                     <img
                       src={job.logoUrl}
                       alt={`${job.company} logo`}
@@ -51,10 +62,10 @@ const Experience: React.FC = () => {
                     />
                   </div>
                   <div className="min-w-0">
-                    <p className={`text-sm font-semibold truncate ${isActive ? 'text-white' : ''}`}>
+                    <p className={`text-sm font-semibold truncate ${isActive ? 'text-neutral-800' : ''}`}>
                       {job.company}
                     </p>
-                    <p className={`text-xs truncate ${isActive ? 'text-neutral-300' : 'text-neutral-400'}`}>
+                    <p className={`text-xs truncate ${isActive ? 'text-neutral-500' : 'text-neutral-400'}`}>
                       {job.role}
                     </p>
                   </div>
@@ -70,8 +81,15 @@ const Experience: React.FC = () => {
         {/* Right: active job detail */}
         <div
           key={active.id}
-          className="bg-neutral-100 rounded-2xl border border-neutral-200 p-10 shadow-sm"
-          style={{ animation: 'fadeSlideIn 0.35s ease-out' }}
+          className="rounded-2xl p-10"
+          style={{
+            animation: 'fadeSlideIn 0.35s ease-out',
+            background: 'linear-gradient(135deg, rgba(212, 212, 216, 0.3) 0%, rgba(228, 228, 231, 0.25) 50%, rgba(212, 212, 216, 0.15) 100%)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            border: '1px solid rgba(212, 212, 216, 0.4)',
+            boxShadow: '0 4px 24px rgba(161, 161, 170, 0.08), inset 0 1px 0 rgba(255,255,255,0.5)',
+          }}
         >
           <div className="flex items-center justify-between mb-6">
             <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider bg-neutral-50 px-3 py-1.5 rounded-full">
@@ -104,7 +122,14 @@ const Experience: React.FC = () => {
         {EXPERIENCES.map((job) => (
           <div
             key={job.id}
-            className="bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm"
+            className="rounded-2xl p-6"
+            style={{
+              background: 'linear-gradient(135deg, rgba(212, 212, 216, 0.3) 0%, rgba(228, 228, 231, 0.25) 50%, rgba(212, 212, 216, 0.15) 100%)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              border: '1px solid rgba(212, 212, 216, 0.4)',
+              boxShadow: '0 4px 24px rgba(161, 161, 170, 0.08), inset 0 1px 0 rgba(255,255,255,0.5)',
+            }}
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg overflow-hidden bg-neutral-50 border border-neutral-100 flex items-center justify-center p-1.5">

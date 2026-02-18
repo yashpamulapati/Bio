@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yash Pamulapati | Product Management Professional</title>
+    <title>Yash Pamulapati</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-weight=%22900%22 font-family=%22sans-serif%22 letter-spacing=%22-4%22 fill=%22%23171717%22>YP.</text></svg>" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -69,6 +69,13 @@
       @keyframes fadeSlideIn {
         0% { opacity: 0; transform: translateY(8px); }
         100% { opacity: 1; transform: translateY(0); }
+      }
+      .hero-cursor {
+        animation: blink 0.8s step-end infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
       }
     </style>
   <script type="importmap">

@@ -3,7 +3,7 @@ import { Experience, Research, SocialLink, Project, Tool } from './types';
 
 export const PROFILE = {
   name: "Yash Pamulapati",
-  title: "Product Management Professional",
+  title: "",
   shortBio: "Lead Consultant at Trimble supporting B2B SaaS applications",
   email: "yashwanth.pamulapati@gmail.com",
   phone: "225-371-2596",

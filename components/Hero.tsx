@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PROFILE } from '../constants';
 import { ArrowDown } from 'lucide-react';
-import WavyLines from './WavyLines';
+import ConstructionScene from './ConstructionScene';
 
 const roles = [
   'Product Management',
@@ -77,11 +77,8 @@ const Hero: React.FC = () => {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-6">
       
-      {/* Wavy lines - bottom */}
-      <WavyLines
-        className="absolute bottom-0 left-0 right-0"
-        style={{ height: '30%', zIndex: 1 }}
-      />
+      {/* Construction scene - bottom */}
+      <ConstructionScene />
 
       {/* Background: gradient + blobs */}
       <div className="absolute inset-0 w-full h-full -z-10">
@@ -155,7 +152,7 @@ const Hero: React.FC = () => {
 
         {/* CTA buttons */}
         <div
-          className={`flex flex-col sm:flex-row gap-4 mt-16 transition-all duration-700 delay-[600ms] ${
+          className={`flex flex-col sm:flex-row gap-4 mt-28 transition-all duration-700 delay-[600ms] ${
             revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { PROFILE } from '../constants';
+import { CraneBg } from './SectionConstructionBgs';
 
 type Reason = 'project' | 'consulting' | 'collaboration' | 'other';
 
@@ -76,7 +77,8 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-neutral-900 py-24 px-6 md:px-20 lg:px-32 text-white relative border-t border-neutral-800">
+    <section id="contact" className="bg-neutral-900 py-24 px-6 md:px-20 lg:px-32 text-white relative border-t border-neutral-800 overflow-hidden">
+      <CraneBg />
       
       {/* Success Toast */}
       {showSuccess && (
@@ -92,7 +94,7 @@ const Contact: React.FC = () => {
         </div>
       )}
 
-      <div className="max-w-5xl mx-auto">
+      <div className="relative max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-16">
 
           {/* Left: info + reason selector */}

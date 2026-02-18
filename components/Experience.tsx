@@ -2,13 +2,7 @@
 import React, { useState } from 'react';
 import { EXPERIENCES } from '../constants';
 import { ExternalLink, ChevronRight } from 'lucide-react';
-import WavyLines from './WavyLines';
-
-const subtleRibbons = [
-  { baseY: 150, thickness: 40, wavelength: 550, amplitude: 35, speed: 0.15, phase: 0.5, color: 'rgba(210, 210, 215, OPACITY)', opacity: 0.08 },
-  { baseY: 140, thickness: 50, wavelength: 480, amplitude: 40, speed: 0.2, phase: 2.0, color: 'rgba(200, 200, 208, OPACITY)', opacity: 0.06 },
-  { baseY: 160, thickness: 35, wavelength: 520, amplitude: 30, speed: 0.18, phase: 3.5, color: 'rgba(215, 215, 220, OPACITY)', opacity: 0.07 },
-];
+import { ScaffoldingBg } from './SectionConstructionBgs';
 
 const Experience: React.FC = () => {
   const [activeId, setActiveId] = useState<string>(EXPERIENCES[0].id);
@@ -16,10 +10,7 @@ const Experience: React.FC = () => {
 
   return (
     <section className="relative py-24 px-6 md:px-20 lg:px-32 max-w-6xl mx-auto overflow-hidden">
-      <WavyLines
-        ribbons={subtleRibbons}
-        className="absolute inset-0"
-      />
+      <ScaffoldingBg />
       <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 mb-16">
         Experience
       </h2>

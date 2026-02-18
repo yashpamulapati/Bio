@@ -2,11 +2,13 @@
 import React from 'react';
 import { RESEARCH } from '../constants';
 import { BookOpen, ExternalLink, Lightbulb, GraduationCap } from 'lucide-react';
+import { DraftingBg } from './SectionConstructionBgs';
 
 const Research: React.FC = () => {
   return (
-    <section className="py-20 bg-neutral-200 border-t border-neutral-300">
-      <div className="px-6 md:px-20 lg:px-32 max-w-[1400px] mx-auto">
+    <section className="relative py-20 bg-neutral-200 border-t border-neutral-300 overflow-hidden">
+      <DraftingBg />
+      <div className="relative px-6 md:px-20 lg:px-32 max-w-[1400px] mx-auto">
         
         {/* Header */}
         <div className="flex items-center gap-3 mb-10 text-neutral-500">

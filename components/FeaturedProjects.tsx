@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FEATURED_PROJECTS } from '../constants';
 import { Plus } from 'lucide-react';
+import { BlueprintBg } from './SectionConstructionBgs';
 
 const FeaturedProjects: React.FC = () => {
   // Show only first 2 real projects, 3rd slot is the placeholder
@@ -9,8 +10,9 @@ const FeaturedProjects: React.FC = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <section id="projects" className="bg-neutral-800 py-20 px-6 md:px-20 lg:px-32 text-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="relative bg-neutral-800 py-20 px-6 md:px-20 lg:px-32 text-white overflow-hidden">
+      <BlueprintBg />
+      <div className="relative max-w-7xl mx-auto">
         
         {/* Section Header */}
         <div className="mb-10 border-b border-neutral-700 pb-6">

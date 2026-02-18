@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         {/* Bio */}
         <div className="space-y-6 mt-8">
           <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light max-w-2xl mx-auto">
-            Senior Consultant at Trimble supporting B2B SaaS applications
+            Lead Consultant at Trimble supporting B2B SaaS applications
             <span className="block mt-2">
               Currently managing $1.5M+ ARR
             </span>

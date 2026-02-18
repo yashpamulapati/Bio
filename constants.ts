@@ -4,7 +4,7 @@ import { Experience, Research, SocialLink, Project, Tool } from './types';
 export const PROFILE = {
   name: "Yash Pamulapati",
   title: "Product Management Professional",
-  shortBio: "Senior Consultant at Trimble supporting B2B SaaS applications",
+  shortBio: "Lead Consultant at Trimble supporting B2B SaaS applications",
   email: "yashwanth.pamulapati@gmail.com",
   phone: "225-371-2596",
   location: "Oklahoma City, OK",
@@ -36,6 +36,7 @@ export const PROFILE = {
      - Developed design analysis procedures to eliminate redundancies.
 
   4. Project Engineer at SaLUT Inc. (Glen Burnie, MD) | Nov 2017 - June 2019
+     - Successfully delivered $5M+ projects by maintaining 100% budget compliance.
      - Collaborated on project scopes, resource planning, and budget allocations.
      - performed design analysis of geotechnical & pavement projects.
      - Supervised junior engineers and lab technicians.
@@ -90,7 +91,7 @@ export const EXPERIENCES: Experience[] = [
     company: 'SaLUT Inc.',
     role: 'Project Engineer',
     period: 'Nov 2017 - June 2019',
-    description: 'Collaborated with senior project managers to develop project scopes and plan resources. Assisted in design analysis and inspections of geotechnical & pavement projects. Trained and supervised junior engineers and lab technicians.',
+    description: 'Successfully delivered $5M+ projects by maintaining 100% budget compliance. Collaborated with senior project managers to develop project scopes and plan resources. Assisted in design analysis and inspections of geotechnical & pavement projects. Trained and supervised junior engineers and lab technicians.',
     website: 'https://salutinc.com',
     logoUrl: 'https://www.google.com/s2/favicons?domain=salutinc.com&sz=256' 
   }

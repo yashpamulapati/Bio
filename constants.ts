@@ -156,4 +156,5 @@ export const TOOLS: Tool[] = [
   { name: 'Tableau', url: 'https://www.tableau.com', logoUrl: 'https://www.google.com/s2/favicons?domain=tableau.com&sz=128' },
   { name: 'Google Antigravity', url: 'https://antigravity.google/', logoUrl: 'https://www.google.com/s2/favicons?domain=antigravity.google&sz=128' },
   { name: 'DBeaver', url: 'https://dbeaver.io', logoUrl: 'https://www.google.com/s2/favicons?domain=dbeaver.io&sz=128' },
+  { name: 'Smartsheet', url: 'https://www.smartsheet.com', logoUrl: 'https://www.google.com/s2/favicons?domain=smartsheet.com&sz=128' },
 ];

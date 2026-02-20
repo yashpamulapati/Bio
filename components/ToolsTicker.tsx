@@ -13,7 +13,7 @@ const ToolsTicker: React.FC = () => {
         {/* Static Title */}
         <div className="shrink-0 z-10 bg-neutral-100 md:pr-4">
           <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-neutral-500 whitespace-nowrap">
-            Using Apps & Tools
+            My Toolkit
           </h3>
         </div>
 

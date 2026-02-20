@@ -22,36 +22,44 @@ const Research: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           
           {/* 1. Education Card - Narrower */}
-          <div className="lg:col-span-1 bg-white relative p-6 rounded-2xl border border-neutral-200 shadow-sm flex flex-col h-full overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <div className="group lg:col-span-1 relative p-6 rounded-2xl shadow-sm flex flex-col h-full overflow-hidden hover:shadow-xl transition-all duration-300 bg-neutral-900">
+            <div className="absolute inset-0 z-0 bg-neutral-900">
+              <img
+                src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop"
+                alt="University campus"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-35"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+            </div>
             
             <div className="relative z-10 h-full flex flex-col">
-               <div className="mb-4 p-2 bg-neutral-50/80 backdrop-blur-sm w-fit rounded-lg border border-neutral-100">
-                <GraduationCap className="w-5 h-5 text-neutral-600" />
+               <div className="mb-4 p-2 bg-white/10 backdrop-blur-sm w-fit rounded-lg border border-white/20">
+                <GraduationCap className="w-5 h-5 text-white" />
                </div>
               
               <div className="flex flex-col gap-6">
                 {/* Masters */}
                 <div>
-                  <h3 className="text-base font-semibold text-neutral-900 leading-tight">
+                  <h3 className="text-base font-semibold text-white leading-tight">
                     Master of Science
                   </h3>
-                  <p className="text-sm text-neutral-600 mt-1">
+                  <p className="text-sm text-neutral-300 mt-1">
                     Civil Engineering
                   </p>
                   <p className="text-xs text-neutral-400 italic mb-2">
                     Specialization in Transportation
                   </p>
-                  <p className="text-xs font-bold text-neutral-700 uppercase tracking-wider">
+                  <p className="text-xs font-bold text-neutral-200 uppercase tracking-wider">
                     Louisiana State University
                   </p>
                 </div>
 
                 {/* Bachelors */}
-                <div className="pt-4 border-t border-neutral-100">
-                  <h3 className="text-sm font-semibold text-neutral-900 leading-tight">
+                <div className="pt-4 border-t border-white/20">
+                  <h3 className="text-sm font-semibold text-white leading-tight">
                     Bachelor of Technology
                   </h3>
-                  <p className="text-xs text-neutral-500 mt-1">
+                  <p className="text-xs text-neutral-400 mt-1">
                     Civil Engineering
                   </p>
                 </div>
@@ -60,60 +68,79 @@ const Research: React.FC = () => {
           </div>
 
           {/* 2. Research Card (2/5 width) */}
-          <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-neutral-200 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow duration-300">
-            <div className="mb-6">
-              <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">
-                Thesis & Publication
-              </span>
-              <h3 className="text-xl font-medium text-neutral-900 mt-2">
-                {RESEARCH.title}
-              </h3>
+          <div className="group lg:col-span-2 relative p-8 rounded-2xl shadow-sm flex flex-col h-full overflow-hidden hover:shadow-xl transition-all duration-300 bg-neutral-900">
+            <div className="absolute inset-0 z-0 bg-neutral-900">
+              <img
+                src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=2070&auto=format&fit=crop"
+                alt="Academic research"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-30"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
             </div>
+            <div className="relative z-10 flex flex-col h-full">
+              <div className="mb-6">
+                <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">
+                  Thesis & Publication
+                </span>
+                <h3 className="text-xl font-medium text-white mt-2">
+                  {RESEARCH.title}
+                </h3>
+              </div>
 
-            <p className="text-neutral-600 leading-relaxed font-light text-sm mb-4">
-              {RESEARCH.summary}
-            </p>
-            
-            <p className="text-neutral-600 leading-relaxed font-light text-sm mb-6 border-l-2 border-amber-400 pl-3 italic">
-               Won travel award from LSU to Present paper in 96th TRB Annual meeting as first author and published an article in the Elsevier journal Construction and Building Materials.
-            </p>
+              <p className="text-neutral-300 leading-relaxed font-light text-sm mb-4">
+                {RESEARCH.summary}
+              </p>
+              
+              <p className="text-neutral-300 leading-relaxed font-light text-sm mb-6 border-l-2 border-amber-400 pl-3 italic">
+                 Won travel award from LSU to Present paper in 96th TRB Annual meeting as first author and published an article in the Elsevier journal Construction and Building Materials.
+              </p>
 
-            {RESEARCH.journalUrl && (
-              <a 
-                href={RESEARCH.journalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors mt-auto group"
-              >
-                {RESEARCH.journalLogo && (
-                  <img src={RESEARCH.journalLogo} alt="Elsevier Logo" className="w-5 h-5 object-contain" />
-                )}
-                Read Publication
-                <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            )}
+              {RESEARCH.journalUrl && (
+                <a 
+                  href={RESEARCH.journalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-neutral-300 transition-colors mt-auto group/link"
+                >
+                  {RESEARCH.journalLogo && (
+                    <img src={RESEARCH.journalLogo} alt="Elsevier Logo" className="w-5 h-5 object-contain" />
+                  )}
+                  Read Publication
+                  <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                </a>
+              )}
+            </div>
           </div>
 
           {/* 3. Innovation/Transition Card (2/5 width) */}
-          <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-neutral-200 shadow-sm flex flex-col h-full hover:shadow-md transition-shadow duration-300">
-             
+          <div className="group lg:col-span-2 relative p-8 rounded-2xl shadow-sm flex flex-col h-full overflow-hidden hover:shadow-xl transition-all duration-300 bg-neutral-900">
+            <div className="absolute inset-0 z-0 bg-neutral-900">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop"
+                alt="Software project management"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20" />
+            </div>
+            <div className="relative z-10 flex flex-col h-full">
              <div className="mb-6">
                <div className="flex items-center gap-2 mb-2">
-                  <div className="p-1.5 bg-neutral-100 rounded-md">
-                    <Lightbulb className="w-4 h-4 text-neutral-500" />
+                  <div className="p-1.5 bg-white/10 backdrop-blur-sm rounded-md border border-white/20">
+                    <Lightbulb className="w-4 h-4 text-white" />
                   </div>
                   <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">
                     Career Pivot
                   </span>
                </div>
-               <h3 className="text-xl font-medium text-neutral-900 mt-2">
+               <h3 className="text-xl font-medium text-white mt-2">
                  {RESEARCH.innovationTitle}
                </h3>
              </div>
              
-             <p className="text-neutral-600 leading-relaxed font-light text-sm">
+             <p className="text-neutral-300 leading-relaxed font-light text-sm">
                {RESEARCH.innovationSummary}
              </p>
+            </div>
           </div>
 
         </div>

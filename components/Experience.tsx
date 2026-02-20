@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { EXPERIENCES } from '../constants';
 import { ExternalLink, ChevronRight } from 'lucide-react';
-import { ScaffoldingBg } from './SectionConstructionBgs';
+import CitySkyline from './CitySkylines';
 
 const Experience: React.FC = () => {
   const [activeId, setActiveId] = useState<string>(EXPERIENCES[0].id);
@@ -10,7 +10,7 @@ const Experience: React.FC = () => {
 
   return (
     <section className="relative py-24 px-6 md:px-20 lg:px-32 max-w-6xl mx-auto overflow-hidden">
-      <ScaffoldingBg />
+      <CitySkyline activeId={activeId} />
       <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400 mb-16">
         Experience
       </h2>

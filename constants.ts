@@ -61,7 +61,7 @@ export const PROFILE = {
 };
 
 export const SOCIALS: SocialLink[] = [
-  { platform: 'Github', url: 'https://github.com', icon: 'Github' },
+  { platform: 'Github', url: 'https://github.com/yashpamulapati', icon: 'Github' },
   { platform: 'Linkedin', url: 'https://www.linkedin.com/in/yashpamulapati', icon: 'Linkedin' },
   { platform: 'Projects', url: '#projects', icon: 'FolderKanban' },
   { platform: 'Contact', url: '#contact', icon: 'Mail' }

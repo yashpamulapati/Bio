@@ -28,7 +28,8 @@ const FeaturedProjects: React.FC = () => {
             const cardProps = isLink ? {
               href: project.link,
               target: '_blank',
-              rel: 'noopener noreferrer'
+              rel: 'noopener noreferrer',
+              ...(project.ariaLabel ? { 'aria-label': project.ariaLabel } : {})
             } : {};
             const hasCover = !!project.coverImage;
 

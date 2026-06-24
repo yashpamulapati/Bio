@@ -4,7 +4,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yash Pamulapati</title>
+    <title>Yash Pamulapati — Product Manager</title>
+    <meta name="description" content="Product Manager with 8+ years across Transportation Management Systems (TMS), Fleet, Logistics, Asset Management, and Enterprise B2B SaaS — owning product strategy, pricing, and delivery for a $1.5M+ ARR platform." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yash Pamulapati — Product Manager" />
+    <meta property="og:description" content="Product Manager with 8+ years across TMS, Fleet, Logistics, Asset Management, and Enterprise B2B SaaS — owning product strategy, pricing, and delivery for a $1.5M+ ARR platform." />
+    <meta property="og:url" content="https://yashpamulapati.dev/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Yash Pamulapati — Product Manager" />
+    <meta name="twitter:description" content="Product Manager with 8+ years across TMS, Fleet, Logistics, Asset Management, and Enterprise B2B SaaS — owning product strategy, pricing, and delivery for a $1.5M+ ARR platform." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-weight=%22900%22 font-family=%22sans-serif%22 letter-spacing=%22-4%22 fill=%22%23171717%22>YP.</text></svg>" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -38,6 +46,21 @@
         animation: scroll 25s linear infinite;
       }
       .animate-scroll:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll-reverse {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .animate-scroll-reverse {
+        animation: scroll-reverse 25s linear infinite;
+      }
+      .animate-scroll-reverse:hover {
         animation-play-state: paused;
       }
 

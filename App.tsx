@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Experience from './components/Experience';
 import FeaturedProjects from './components/FeaturedProjects';
 import ToolsTicker from './components/ToolsTicker';
+import Recognitions from './components/Recognitions';
 import Research from './components/Research';
 import Contact from './components/Contact';
 import { PROFILE } from './constants';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Hero />
         <FeaturedProjects />
         <ToolsTicker />
+        <Recognitions />
         <Experience />
         <Research />
         <Contact />

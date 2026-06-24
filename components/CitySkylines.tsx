@@ -3,40 +3,52 @@ import React from 'react';
 const W = 1200;
 const H = 300;
 
-const OklahomaCitySkyline: React.FC = () => (
+const DenverSkyline: React.FC = () => (
   <g>
-    {/* Filled silhouette */}
+    {/* Rocky Mountains backdrop */}
     <path
-      d="M 0 300 L 0 240 L 20 240 L 20 230 L 40 230 L 40 220 L 55 220 L 55 240 L 70 240 L 70 210 L 85 210 L 85 240 L 100 240 L 100 225 L 115 225 L 115 235 L 130 235
-         L 130 200 L 145 200 L 145 180 L 155 180 L 155 195 L 170 195 L 170 170 L 180 170 L 180 160 L 190 160 L 190 180 L 205 180 L 205 200 L 220 200 L 220 190 L 235 190 L 235 210 L 250 210
-         L 250 185 L 265 185 L 265 160 L 275 160 L 275 140 L 285 140 L 285 120 L 295 120 L 295 100 L 305 100 L 305 80 L 310 75 L 315 70 L 318 65 L 320 55 L 322 65 L 325 70 L 330 75 L 335 80
-         L 335 100 L 345 100 L 345 85 L 355 85 L 355 75 L 365 75 L 365 85 L 375 85 L 375 100 L 385 100 L 385 110 L 395 110 L 395 90 L 405 90 L 405 80 L 415 80 L 415 95 L 425 95 L 425 110
-         L 440 110 L 440 130 L 450 130 L 450 120 L 465 120 L 465 140 L 480 140
-         L 480 110 L 490 110 L 490 95 L 498 90 L 500 85 L 502 90 L 510 95 L 510 110 L 520 110 L 520 130 L 535 130 L 535 150 L 550 150 L 550 135 L 565 135 L 565 155 L 580 155 L 580 170 L 600 170
-         L 600 185 L 620 185 L 620 195 L 640 195 L 640 210 L 660 210 L 660 200 L 680 200 L 680 220 L 700 220 L 700 230 L 730 230 L 730 225 L 760 225 L 760 235 L 790 235 L 790 240 L 830 240
-         L 830 245 L 880 245 L 880 250 L 950 250 L 950 260 L 1050 260 L 1050 270 L 1200 270 L 1200 300 Z"
+      d="M 0 300 L 0 205 L 70 150 L 130 180 L 210 125 L 290 170 L 370 135 L 470 95 L 560 150 L 660 115 L 770 165 L 890 130 L 1010 172 L 1110 145 L 1200 178 L 1200 300 Z"
+      fill="rgba(190, 190, 195, 0.14)"
+      stroke="rgba(160, 160, 168, 0.35)"
+      strokeWidth="0.7"
+    />
+    {/* Snow-cap hints on the tallest peaks */}
+    <path d="M 445 113 L 470 95 L 495 113 Z" fill="rgba(205, 205, 210, 0.22)" stroke="none" />
+    <path d="M 195 137 L 210 125 L 225 137 Z" fill="rgba(205, 205, 210, 0.2)" stroke="none" />
+
+    {/* Filled downtown silhouette */}
+    <path
+      d="M 0 300 L 0 255 L 30 255 L 30 248 L 60 248 L 60 240 L 90 240 L 90 250 L 120 250 L 120 235 L 150 235 L 150 245 L 180 245
+         L 180 210 L 200 210 L 200 195 L 215 195 L 215 215 L 235 215 L 235 185 L 250 185 L 250 165 L 268 165 L 268 180 L 285 180
+         L 285 150 L 298 150 L 298 90 L 304 85 L 304 70 L 346 70 L 346 85 L 352 90 L 352 150 L 366 150
+         L 366 130 L 380 130 L 380 110 L 396 110 L 396 95 L 440 95 L 440 110 L 456 110 L 456 130 L 470 130
+         L 470 140 L 485 140 L 485 100 L 489 90 L 495 82 L 503 76 L 510 74 L 517 76 L 525 82 L 531 90 L 535 100 L 535 140 L 550 140
+         L 550 160 L 572 160 L 572 145 L 588 145 L 588 165 L 606 165 L 606 150 L 626 150 L 626 175 L 650 175
+         L 650 190 L 690 190 L 690 205 L 730 205 L 730 215 L 780 215 L 780 225 L 840 225 L 840 235 L 900 235 L 900 245 L 980 245 L 980 252 L 1080 252 L 1080 262 L 1200 262 L 1200 300 Z"
       fill="rgba(180, 180, 185, 0.25)"
       stroke="rgba(150, 150, 158, 0.6)"
       strokeWidth="0.8"
     />
-    {/* Devon Tower accent - slightly darker */}
-    <path d="M 305 100 L 305 80 L 310 75 L 315 70 L 318 65 L 320 55 L 322 65 L 325 70 L 330 75 L 335 80 L 335 100 Z"
-      fill="rgba(165, 165, 172, 0.3)" stroke="none" />
-    {/* Chase Tower accent */}
-    <path d="M 480 140 L 480 110 L 490 110 L 490 95 L 498 90 L 500 85 L 502 90 L 510 95 L 510 110 L 520 110 L 520 140 Z"
-      fill="rgba(165, 165, 172, 0.25)" stroke="none" />
-    {/* Tall buildings accent */}
-    <rect x="345" y="75" width="30" height="55" fill="rgba(170, 170, 178, 0.2)" stroke="none" />
-    <rect x="395" y="80" width="30" height="50" fill="rgba(170, 170, 178, 0.18)" stroke="none" />
-    {/* Antenna */}
-    <line x1="320" y1="55" x2="320" y2="38" stroke="rgba(150, 150, 158, 0.5)" strokeWidth="0.6" />
-    <line x1="500" y1="85" x2="500" y2="72" stroke="rgba(150, 150, 158, 0.5)" strokeWidth="0.6" />
+    {/* Republic Plaza accent (tallest) */}
+    <path d="M 298 150 L 298 90 L 304 85 L 304 70 L 346 70 L 346 85 L 352 90 L 352 150 Z"
+      fill="rgba(165, 165, 172, 0.32)" stroke="none" />
+    {/* 1801 California accent */}
+    <path d="M 380 130 L 380 110 L 396 110 L 396 95 L 440 95 L 440 110 L 456 110 L 456 130 Z"
+      fill="rgba(165, 165, 172, 0.22)" stroke="none" />
+    {/* Wells Fargo Center "Cash Register" accent - arched top */}
+    <path d="M 485 140 L 485 100 L 489 90 L 495 82 L 503 76 L 510 74 L 517 76 L 525 82 L 531 90 L 535 100 L 535 140 Z"
+      fill="rgba(160, 160, 168, 0.3)" stroke="none" />
+    {/* Antennas */}
+    <line x1="325" y1="70" x2="325" y2="52" stroke="rgba(150, 150, 158, 0.5)" strokeWidth="0.6" />
     {/* Window hints */}
     {Array.from({ length: 8 }, (_, i) => (
-      <line key={`dw${i}`} x1="310" y1={80 + i * 8} x2="330" y2={80 + i * 8} stroke="rgba(150, 150, 158, 0.3)" strokeWidth="0.4" />
+      <line key={`rp${i}`} x1="305" y1={88 + i * 7} x2="345" y2={88 + i * 7} stroke="rgba(150, 150, 158, 0.3)" strokeWidth="0.4" />
     ))}
     {Array.from({ length: 5 }, (_, i) => (
-      <line key={`tw${i}`} x1="350" y1={80 + i * 10} x2="370" y2={80 + i * 10} stroke="rgba(150, 150, 158, 0.25)" strokeWidth="0.4" />
+      <line key={`ca${i}`} x1="382" y1={98 + i * 6} x2="438" y2={98 + i * 6} stroke="rgba(150, 150, 158, 0.25)" strokeWidth="0.4" />
+    ))}
+    {Array.from({ length: 4 }, (_, i) => (
+      <line key={`cr${i}`} x1="487" y1={104 + i * 8} x2="533" y2={104 + i * 8} stroke="rgba(150, 150, 158, 0.25)" strokeWidth="0.4" />
     ))}
   </g>
 );
@@ -143,7 +155,7 @@ const WashingtonDCSkyline: React.FC = () => (
 );
 
 const skylineMap: Record<string, React.FC> = {
-  trimble: OklahomaCitySkyline,
+  trimble: DenverSkyline,
   'borton-lawson': PhiladelphiaSkyline,
   salut: WashingtonDCSkyline,
 };

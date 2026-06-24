@@ -57,7 +57,7 @@ const Research: React.FC = () => {
                 {/* Bachelors */}
                 <div className="pt-4 border-t border-white/20">
                   <h3 className="text-sm font-semibold text-white leading-tight">
-                    Bachelor of Technology
+                    Bachelor of Science
                   </h3>
                   <p className="text-xs text-neutral-400 mt-1">
                     Civil Engineering

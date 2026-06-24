@@ -38,10 +38,18 @@ export interface Project {
   imageUrl?: string; // Small logo/image inside card
   coverImage?: string; // Full background image
   link?: string; // External URL
+  ariaLabel?: string; // Accessible label when the card is a link
 }
 
 export interface Tool {
   name: string;
   url: string;
   logoUrl: string;
+}
+
+export interface Recognition {
+  label: string;
+  detail: string;
+  icon: string; // Lucide icon name
+  url?: string; // Optional external link
 }

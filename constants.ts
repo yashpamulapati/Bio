@@ -20,10 +20,11 @@ export const PROFILE = {
   Product Manager with 8+ years spanning Transportation Management Systems (TMS), Fleet, Logistics, Asset Management Systems (AMS), and Enterprise B2B SaaS. Owned product strategy, pricing, and delivery for a $1.5M+ ARR fleet & asset-management SaaS platform serving owner & public-sector clientele — owning the PDLC from customer discovery and MVP through production launch. Shipped an AI-powered product from zero-to-one (concept through prototype to stakeholder adoption) and drove cross-functional delivery across engineering, design, and go-to-market (GTM).
 
   EXPERIENCE:
-  1. Product Owner (Fleet & Asset Management Systems) at Trimble Inc. (Oklahoma City, OK) | May 2022 – Present
-     - Owns product strategy, roadmap, and OKRs for a $1.5M+ ARR TMS & asset-management SaaS portfolio serving public-sector and enterprise customers, leading the full cycle from customer discovery through production launch.
+  1. Lead Solutions Consultant & AI enabler at Trimble Inc. (Oklahoma City, OK) | May 2022 – Present
+     - Embeds with the engineering team as a hands-on AI integrator, building MCP-based automations and agentic workflows (Cursor, n8n, Oracle/REST) that replace manually intensive processes — cutting production debugging from days to hours and reducing technical escalations by 90%+.
      - Shipped an MCP-powered agentic AI assistant embedded in the platform (hackathon runner-up), turning natural-language prompts into live API actions.
-     - Delivered IoT/fleet-telematics integration and a zero-downtime migration of enterprise data pipelines to AWS.
+     - Converts successful AI experiments into reusable workflow patterns and playbooks, and coaches engineers on practical AI tooling (Python, Cursor, MCP).
+     - Delivered Samsara fleet-telematics (IoT) integration and a zero-downtime migration of multi-agency data interfaces to AWS S3-backed SFTP, while owning technical program delivery for a $1.5M+ ARR platform.
 
   2. Program Manager (Construction & Infrastructure Technology) at Borton-Lawson (Bethlehem, PA) | June 2019 - May 2022
      - Managed full-lifecycle delivery for architecture, engineering, and construction programs — scope, budgets up to $2M, and risk across eight industrial and public-infrastructure portfolios.
@@ -66,9 +67,9 @@ export const EXPERIENCES: Experience[] = [
   {
     id: 'trimble',
     company: 'Trimble Inc.',
-    role: 'Product Owner, Fleet & Asset Management Systems',
+    role: 'Lead Solutions Consultant & AI enabler',
     period: 'May 2022 – Present',
-    description: 'Own product strategy, roadmap, and OKRs for a $1.5M+ ARR TMS and asset-management SaaS portfolio serving public-sector and enterprise customers, leading the full cycle from customer discovery through production launch. Recently shipped an MCP-powered agentic AI assistant embedded in the platform (hackathon runner-up), and delivered IoT/fleet-telematics integration and a zero-downtime migration of enterprise data pipelines to AWS.',
+    description: 'Embed with the engineering team as a hands-on AI integrator, building MCP-based automations and agentic workflows (Cursor, n8n, Oracle/REST) that replace manually intensive processes — cutting production debugging from days to hours and reducing technical escalations by 90%+. Shipped an MCP-powered agentic AI assistant (hackathon runner-up) that turns natural-language prompts into live API actions, and convert successful experiments into reusable workflow patterns and playbooks while coaching engineers on practical AI tooling. Also delivered Samsara fleet-telematics (IoT) integration end-to-end and a zero-downtime migration of multi-agency data interfaces to AWS S3-backed SFTP, while owning technical program delivery for a $1.5M+ ARR platform.',
     website: 'https://assetlifecycle.trimble.com/en',
     logoUrl: 'https://www.google.com/s2/favicons?domain=trimble.com&sz=256' 
   },
